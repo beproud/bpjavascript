@@ -1,6 +1,10 @@
 # vim:fileencoding=utf-8
+import sys
 from datetime import datetime,date,time
-from unittest import TestCase
+if sys.version_info < (3,):
+    from unittest2 import TestCase
+else:
+    from unittest import TestCase
 
 from beproud.javascript import (
     json,
